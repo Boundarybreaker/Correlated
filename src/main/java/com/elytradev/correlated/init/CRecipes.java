@@ -244,7 +244,7 @@ public class CRecipes {
 				'i', COres.INGOT_IRON,
 				'p', CStacks.luminousPearl(),
 				'g', COres.BLOCK_GLASS
-				), "optical_transceiver");
+				), "optical");
 		
 		// Beacon Lens
 		addRecipe(e.getRegistry(), new ShapedOreRecipe(null, CStacks.beaconLens(),
