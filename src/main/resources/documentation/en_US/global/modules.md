@@ -31,5 +31,5 @@ Wireless systems can connect handheld terminals to networks or networks to other
 
 There are three methods of transmitting wireless connections:
 - Optical Transceivers are power-efficient but are short range and can only connect to systems in line of sight.
-- Beacon Lenses use bleeding-edge harness the power of Beacons. They are placed on top of an active beacon and can connect to anywhere within the beacon's range, even without line of sight. They will not obstruct the beacon beam, but will not work if the beam is blocked overhead.
+- Beacon Lenses use bleeding-edge technology to harness the power of Beacons. They are placed on top of an active beacon and can connect to anywhere within the beacon's range, even without line of sight. They will not obstruct the beacon beam, but will not work if the beam is blocked overhead.
 - Microwave Beams have infinite range, but use a lot of power and only work within line of sight. They do not use APNs, but must be paired manually by using them on each other. These cannot be used to connect to handheld terminals.
