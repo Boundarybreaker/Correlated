@@ -418,11 +418,13 @@ public class GuiTerminal extends GuiContainer {
 		}
 		
 		RenderHelper.enableGUIStandardItemLighting();
+		int l = 0;
 		for (int j = -(scrollOffset * container.slotsAcross); j < (container.slotsAcross*container.slotsTall); j++) {
+			l++;
 			if (j < 0) {
 				continue;
 			}
-			NetworkType type = (j < networkContentsView.size() ? networkContentsView.get(j) : null);
+			NetworkType type = (l < networkContentsView.size() ? networkContentsView.get(l) : null);
 			int x = container.startX + (j % container.slotsAcross) * 18;
 			int y = (container.startY + 18) + (j / container.slotsAcross) * 18;
 			if (j >= (container.slotsAcross * container.slotsTall)) break;
@@ -827,12 +829,12 @@ public class GuiTerminal extends GuiContainer {
 		if (hasSearchAndSort()) {
 			searchField.x = x+143;
 			searchField.y = y+6;
-			buttonList.add(sortDirection = new GuiButtonExt(0, x+236, y+4, 12, 12, ""));
-			buttonList.add(sortMode = new GuiButtonExt(1, x+128, y+4, 12, 12, ""));
-			buttonList.add(focusByDefault = new GuiButtonExt(5, x+114, y+4, 12, 12, ""));
-			buttonList.add(preferredEnergySystem = new GuiButtonExt(9, x+100, y+4, 12, 12, ""));
+			buttonList.add(sortDirection = new GuiButtonExt(0, x+100, y+4, 12, 12, ""));
+			buttonList.add(sortMode = new GuiButtonExt(1, x+114, y+4, 12, 12, ""));
+			buttonList.add(focusByDefault = new GuiButtonExt(5, x+128, y+4, 12, 12, ""));
+			buttonList.add(preferredEnergySystem = new GuiButtonExt(9, x-getXOffset()+getEnergyUnitX(), y-getYOffset()+getEnergyUnitY(), 12, 12, ""));
 			if (Correlated.inst.jeiAvailable) {
-				buttonList.add(jeiSync = new GuiButtonExt(6, x-getXOffset()+getJeiSyncX(), y-getYOffset()+getJeiSyncY(), 12, 12, ""));
+				buttonList.add(jeiSync = new GuiButtonExt(6, x+236, y+4, 12, 12, ""));
 			}
 		}
 		if (container.hasCraftingMatrix) {
@@ -854,11 +856,11 @@ public class GuiTerminal extends GuiContainer {
 		return 0;
 	}
 	
-	protected int getJeiSyncX() {
+	protected int getEnergyUnitX() {
 		return 236;
 	}
 	
-	protected int getJeiSyncY() {
+	protected int getEnergyUnitY() {
 		return 130;
 	}
 
@@ -1149,7 +1151,7 @@ public class GuiTerminal extends GuiContainer {
 			y += getScrollTrackY();
 			scrollKnobY = Math.max(Math.min(getScrollTrackHeight()-9, (mouseY-24)-y), 6);
 			float pct = ((scrollKnobY-6)/(float)(getScrollTrackHeight()-9));
-			scrollOffset = (int)(pct * (rows-1));
+			scrollOffset = (int)(pct * rows);
 		}
 		super.mouseClickMove(mouseX, mouseY, mouseButton, timeSinceLastClick);
 	}
