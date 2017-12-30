@@ -1,7 +1,7 @@
-<img src="https://rawgit.com/elytra/Correlated/1.11.2/doc/emblem.svg" align="right" width="180px"/>
+<img src="https://rawgit.com/elytra/Correlated/1.12.2/assets/emblem.svg" align="right" width="180px"/>
 
 # Correlated
-[>> Downloads <<](https://github.com/elytra/Correlated/releases)
+[>>> Bleeding Edge Downloads (Jenkins) <<<](https://ci.elytradev.com/job/elytra/job/Correlated/)
 
 *Storage and automation for the modern world.*
 
