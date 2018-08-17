@@ -23,3 +23,6 @@ private.properties
 # Files from bad operating systems :^)
 Thumbs.db
 .DS_Store
+src/main/resources/documentation/.Ulysses-favorites.plist
+src/main/resources/documentation/en_us/abridged/.Ulysses-Group.plist
+src/main/resources/documentation/en_us/global/.Ulysses-Group.plist
